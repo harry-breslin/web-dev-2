@@ -16,7 +16,7 @@ export default function BlogPost() {
       .then((result) => result.json())
       .then((json) => {
         setTimeout(() => {
-          setName(json[0].name);
+          setName(json[Math.floor(Math.random() * json.length)].name);
         }, 2000);
       });
   }, [])
